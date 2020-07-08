@@ -33,9 +33,9 @@ class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 				.authorizedGrantTypes("authorization_code", "client_credentials", "password", "refresh_token").scopes("user_info")
 				.autoApprove(true)
 				.redirectUris("http://localhost:8080/login", "http://localhost:8080")
-				.accessTokenValiditySeconds(1200).and().withClient("myclient2")
+				.accessTokenValiditySeconds(3600).and().withClient("myclient2")
 				.secret(passwordEncoder.encode("mysecret2")).authorizedGrantTypes("password").scopes("internal")
-				.accessTokenValiditySeconds(1200)
+				.accessTokenValiditySeconds(3600)
 	}
 	AuthServerConfig(AuthenticationManager authenticationManager) {
 		this.authenticationManager = authenticationManager

@@ -3,7 +3,7 @@ server:
   servlet:
     context-path: /auth
     session:
-      timeout: 15s
+      timeout: 3600s
 ldap:
   partitionSuffix:
   port: 10389
