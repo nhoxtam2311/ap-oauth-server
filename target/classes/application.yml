@@ -1,0 +1,10 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /auth
+    session:
+      timeout: 3600s
+ldap:
+  partitionSuffix:
+  port: 10389
+  url: ldap://localhost:10389

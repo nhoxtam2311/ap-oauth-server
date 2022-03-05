@@ -1,0 +1,5 @@
+school\iu\oauth\AuthServerConfig.class
+school\iu\oauth\OauthServerApplication.class
+school\iu\oauth\WebMvcConfiguration.class
+school\iu\oauth\SecurityConfig.class
+school\iu\oauth\UserController.class

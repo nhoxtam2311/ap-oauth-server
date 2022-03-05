@@ -32,7 +32,7 @@ class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 		clients.inMemory().withClient("myclient1").secret(passwordEncoder.encode("mysecret1"))
 				.authorizedGrantTypes("authorization_code", "client_credentials", "password", "refresh_token").scopes("user_info")
 				.autoApprove(true)
-				.redirectUris("http://localhost:8080/login", "http://localhost:8080")
+				.redirectUris("http://localhost:8081/login", "http://localhost:8081")
 				.accessTokenValiditySeconds(3600).and().withClient("myclient2")
 				.secret(passwordEncoder.encode("mysecret2")).authorizedGrantTypes("password").scopes("internal")
 				.accessTokenValiditySeconds(3600)
