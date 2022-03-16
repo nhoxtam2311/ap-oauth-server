@@ -34,7 +34,7 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
 	void configure(HttpSecurity http) throws Exception { // @formatter:off
 		http.
 		requestMatchers().antMatchers("/login", "/oauth/authorize").and().authorizeRequests().anyRequest()
-				.authenticated().and().formLogin().loginPage("/login").permitAll()
+				.authenticated().and().formLogin().loginPage("/login").defaultSuccessUrl("http://localhost:8081/project", true).permitAll()
 	} // @formatter:on
 	@Override
 	void configure(AuthenticationManagerBuilder auth) throws Exception {
